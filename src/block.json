@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/aib",
+	"version": "0.1.0",
+	"title": "Advanced image block",
+	"category": "media",
+	"icon": "format-image",
+	"attributes": {
+		"imageId": {
+			"type": "number"
+		},
+		"imageURL": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "src",
+			"selector": "img"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "h1,h2,h3,h4,h5,h6",
+			"default": ""
+		},
+		"textLevel": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "tagName",
+			"default": "h1"
+		},
+		"textColor": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "color",
+			"default": "#000"
+		}
+	},
+	"description": "Example static block scaffolded with Create Block tool.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "aib",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
