@@ -1,8 +1,8 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
-	const { imageURL, text } = attributes
+	const { imageURL, text, textLevel } = attributes
 	return (
 		<>
 			{imageURL ? (
@@ -10,9 +10,8 @@ export default function save({ attributes }) {
 					} >
 						<img
 							src={imageURL}
-							alt={imgAlt}
 						/>
-						<RichText.Content value={text} />
+						<RichText.Content value={text} tagName={textLevel} />
 
 					</div >
 				) : "" }
