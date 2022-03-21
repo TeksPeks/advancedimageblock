@@ -35,6 +35,10 @@ export default function Edit({ attributes, setAttributes }) {
 		} )
 	}
 
+	const style = {
+		color: textColor
+	}
+
 	return (
 		<div { ...useBlockProps() }>
 			{ imageURL ? (
@@ -61,7 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
 						value={text}
 						onChange={onChangeText}
 						placeholder={"Enter a title"}
-						color={textColor}
+						style={style}
 					/>
 			<InspectorControls>
 					<Panel>
