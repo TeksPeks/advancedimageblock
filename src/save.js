@@ -12,7 +12,7 @@ export default function save({ attributes }) {
 						<img
 							src={imageURL}
 						/>
-						<TagName style={textColor}> 
+						<TagName style={`color:${textColor}`}> 
 							<RichText.Content value={text} />
 						</TagName>
 
